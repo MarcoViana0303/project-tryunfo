@@ -102,6 +102,7 @@ export default class Form extends React.Component {
             <select
               data-testid="rare-input"
               id="rare-input"
+              name="cardRare"
               value={ cardRare }
               onChange={ onInputChange }
             >
