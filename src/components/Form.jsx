@@ -5,8 +5,8 @@ export default class Form extends React.Component {
   render() {
     const { cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
-      isSaveButtonDisabled, onInputChange, onSaveButtonClick } = this.props;
-      // hasTrunfo
+      isSaveButtonDisabled, onInputChange, onSaveButtonClick, hasTrunfo } = this.props;
+
     return (
       <div>
         <form>
@@ -113,18 +113,19 @@ export default class Form extends React.Component {
           </label>
           <br />
           <br />
-
-          <label htmlFor="trunfo-input">
-            <input
-              type="checkbox"
-              name="cardTrunfo"
-              data-testid="trunfo-input"
-              id="trunfo-input"
-              checked={ cardTrunfo }
-              onChange={ onInputChange }
-            />
-            Super Trunfo Trybe
-          </label>
+          {hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> : (
+            <label htmlFor="trunfo-input">
+              <input
+                type="checkbox"
+                name="cardTrunfo"
+                data-testid="trunfo-input"
+                id="trunfo-input"
+                checked={ cardTrunfo }
+                onChange={ onInputChange }
+              />
+              Super Trunfo Trybe
+            </label>
+          )}
 
           <br />
           <br />
@@ -133,7 +134,16 @@ export default class Form extends React.Component {
             data-testid="save-button"
             id="save-button"
             disabled={ isSaveButtonDisabled }
-            onClick={ onSaveButtonClick }
+            onClick={ () => onSaveButtonClick({
+              cardName,
+              cardDescription,
+              cardAttr1,
+              cardAttr2,
+              cardAttr3,
+              cardImage,
+              cardRare,
+              cardTrunfo,
+            }) }
           >
             Salvar
           </button>
