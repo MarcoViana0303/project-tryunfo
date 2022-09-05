@@ -65,7 +65,6 @@ class App extends React.Component {
     this.setState({
       isSaveButtonDisabled: !validaTeste,
     });
-    console.log(validaTeste);
   };
 
   onInputChange = ({ target }) => {
@@ -79,7 +78,7 @@ class App extends React.Component {
   render() {
     const { cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardTrunfo, hasTrunfo,
-      cardImage, isSaveButtonDisabled, cardRare } = this.state;
+      cardImage, isSaveButtonDisabled, cardRare, dados } = this.state;
 
     return (
       <div>
@@ -108,6 +107,18 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           cardImage={ cardImage }
         />
+        {dados.map((element) => (
+          <Card
+            key={ element.cardImage }
+            cardName={ element.cardName }
+            cardDescription={ element.cardDescription }
+            cardAttr1={ element.cardAttr1 }
+            cardAttr2={ element.cardAttr2 }
+            cardAttr3={ element.cardAttr3 }
+            cardTrunfo={ element.cardTrunfo }
+            cardImage={ element.cardImage }
+          />
+        ))}
       </div>
     );
   }
