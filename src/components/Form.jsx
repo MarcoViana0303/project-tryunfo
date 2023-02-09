@@ -8,11 +8,15 @@ export default class Form extends React.Component {
       isSaveButtonDisabled, onInputChange, onSaveButtonClick, hasTrunfo } = this.props;
 
     return (
-      <div>
+      <div className='div-form'>
+      <div className='div-cards'>
         <form>
 
-          <label htmlFor="name-input">
-            Nome
+        <div className="div-desc-name">
+
+        <label htmlFor="name-input">
+            <p>Nome</p>
+
             <p />
             <input
               type="text"
@@ -21,10 +25,11 @@ export default class Form extends React.Component {
               id="name-input"
               value={ cardName }
               onChange={ onInputChange }
+              className= 'input-effect'
             />
           </label>
           <label htmlFor="description-input">
-            Descrição
+           <p>Descrição</p>
             <p />
             <input
               type="textarea"
@@ -33,12 +38,17 @@ export default class Form extends React.Component {
               id="description-input"
               value={ cardDescription }
               onChange={ onInputChange }
+              className= 'input-effect'
             />
 
           </label>
+        </div>
+         
+
+          <div className='div-attr'>
 
           <label htmlFor="attr1-input">
-            Attr01
+              <p>Attr01</p>
             <input
               type="number"
               name="cardAttr1"
@@ -46,6 +56,7 @@ export default class Form extends React.Component {
               id="attr1-input"
               value={ cardAttr1 }
               onChange={ onInputChange }
+              className= 'effect-attr'
             />
 
           </label>
@@ -53,7 +64,7 @@ export default class Form extends React.Component {
           <br />
 
           <label htmlFor="attr2-input">
-            Attr02
+          <p>Attr02</p>
             <input
               type="number"
               name="cardAttr2"
@@ -61,13 +72,14 @@ export default class Form extends React.Component {
               id="attr2-input"
               value={ cardAttr2 }
               onChange={ onInputChange }
+              className= 'effect-attr'
             />
           </label>
           <br />
           <br />
 
           <label htmlFor="attr3-input">
-            Attr03
+          <p>Attr03</p>
             <input
               type="number"
               name="cardAttr3"
@@ -75,14 +87,17 @@ export default class Form extends React.Component {
               id="attr3-input"
               value={ cardAttr3 }
               onChange={ onInputChange }
+              className= 'effect-attr'
             />
 
           </label>
+          </div>
+         
           <br />
           <br />
 
           <label htmlFor="image-input">
-            Imagem
+             <p>Imagem</p>
             <input
               type="text"
               name="cardImage"
@@ -90,6 +105,7 @@ export default class Form extends React.Component {
               id="image-input"
               value={ cardImage }
               onChange={ onInputChange }
+              className= 'input-effect'
             />
 
           </label>
@@ -97,7 +113,7 @@ export default class Form extends React.Component {
           <br />
 
           <label htmlFor="rare-input">
-            Raridade
+             <p>Raridade</p>
             <p />
             <select
               data-testid="rare-input"
@@ -123,12 +139,14 @@ export default class Form extends React.Component {
                 checked={ cardTrunfo }
                 onChange={ onInputChange }
               />
-              Super Trunfo Trybe
+              <p>Super Trunfo Trybe</p>
             </label>
           )}
 
           <br />
           <br />
+          <div className='button-div'>
+
           <button
             type="button"
             data-testid="save-button"
@@ -148,7 +166,10 @@ export default class Form extends React.Component {
             Salvar
           </button>
 
+          </div>
+          
         </form>
+      </div>
       </div>
     );
   }

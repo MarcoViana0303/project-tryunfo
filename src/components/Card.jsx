@@ -6,7 +6,9 @@ export default class Card extends React.Component {
     const { cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo } = this.props;
     return (
-      <div>
+      <div className='card'>
+        <div className="card2">
+
         <section data-testid="name-card">
           {cardName}
         </section>
@@ -38,6 +40,7 @@ export default class Card extends React.Component {
             Super Trunfo
           </section>
         )}
+        </div>
 
       </div>
     );
