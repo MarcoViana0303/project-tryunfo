@@ -138,6 +138,7 @@ export default class Form extends React.Component {
                 id="trunfo-input"
                 checked={ cardTrunfo }
                 onChange={ onInputChange }
+                className='input-effect'
               />
               <p>Super Trunfo Trybe</p>
             </label>
