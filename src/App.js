@@ -82,7 +82,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <h1 className='title-cards'>Adicionar nova carta</h1>
+        <h1 className="title-cards">Adicionar nova carta</h1>
         <Form
           onInputChange={ this.onInputChange }
           cardName={ cardName }

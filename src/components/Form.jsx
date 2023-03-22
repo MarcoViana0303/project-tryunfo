@@ -8,169 +8,168 @@ export default class Form extends React.Component {
       isSaveButtonDisabled, onInputChange, onSaveButtonClick, hasTrunfo } = this.props;
 
     return (
-      <div className='div-form'>
-      <div className='div-cards'>
-        <form>
+      <div className="div-form">
+        <div className="div-cards">
+          <form>
 
-        <div className="div-desc-name">
+            <div className="div-desc-name">
 
-        <label htmlFor="name-input">
-            <p>Nome</p>
+              <label htmlFor="name-input">
+                <p>Nome</p>
 
-            <p />
-            <input
-              type="text"
-              name="cardName"
-              data-testid="name-input"
-              id="name-input"
-              value={ cardName }
-              onChange={ onInputChange }
-              className= 'input-effect'
-            />
-          </label>
-          <label htmlFor="description-input">
-           <p>Descrição</p>
-            <p />
-            <input
-              type="textarea"
-              name="cardDescription"
-              data-testid="description-input"
-              id="description-input"
-              value={ cardDescription }
-              onChange={ onInputChange }
-              className= 'input-effect'
-            />
+                <p />
+                <input
+                  type="text"
+                  name="cardName"
+                  data-testid="name-input"
+                  id="name-input"
+                  value={ cardName }
+                  onChange={ onInputChange }
+                  className="input-effect"
+                />
+              </label>
+              <label htmlFor="description-input">
+                <p>Descrição</p>
+                <p />
+                <input
+                  type="textarea"
+                  name="cardDescription"
+                  data-testid="description-input"
+                  id="description-input"
+                  value={ cardDescription }
+                  onChange={ onInputChange }
+                  className="input-effect"
+                />
 
-          </label>
-        </div>
-         
+              </label>
+            </div>
 
-          <div className='div-attr'>
+            <div className="div-attr">
 
-          <label htmlFor="attr1-input">
-              <p>Attr01</p>
-            <input
-              type="number"
-              name="cardAttr1"
-              data-testid="attr1-input"
-              id="attr1-input"
-              value={ cardAttr1 }
-              onChange={ onInputChange }
-              className= 'effect-attr'
-            />
+              <label htmlFor="attr1-input">
+                <p>Attr01</p>
+                <input
+                  type="number"
+                  name="cardAttr1"
+                  data-testid="attr1-input"
+                  id="attr1-input"
+                  value={ cardAttr1 }
+                  onChange={ onInputChange }
+                  className="effect-attr"
+                />
 
-          </label>
-          <br />
-          <br />
+              </label>
+              <br />
+              <br />
 
-          <label htmlFor="attr2-input">
-          <p>Attr02</p>
-            <input
-              type="number"
-              name="cardAttr2"
-              data-testid="attr2-input"
-              id="attr2-input"
-              value={ cardAttr2 }
-              onChange={ onInputChange }
-              className= 'effect-attr'
-            />
-          </label>
-          <br />
-          <br />
+              <label htmlFor="attr2-input">
+                <p>Attr02</p>
+                <input
+                  type="number"
+                  name="cardAttr2"
+                  data-testid="attr2-input"
+                  id="attr2-input"
+                  value={ cardAttr2 }
+                  onChange={ onInputChange }
+                  className="effect-attr"
+                />
+              </label>
+              <br />
+              <br />
 
-          <label htmlFor="attr3-input">
-          <p>Attr03</p>
-            <input
-              type="number"
-              name="cardAttr3"
-              data-testid="attr3-input"
-              id="attr3-input"
-              value={ cardAttr3 }
-              onChange={ onInputChange }
-              className= 'effect-attr'
-            />
+              <label htmlFor="attr3-input">
+                <p>Attr03</p>
+                <input
+                  type="number"
+                  name="cardAttr3"
+                  data-testid="attr3-input"
+                  id="attr3-input"
+                  value={ cardAttr3 }
+                  onChange={ onInputChange }
+                  className="effect-attr"
+                />
 
-          </label>
-          </div>
-         
-          <br />
-          <br />
+              </label>
+            </div>
 
-          <label htmlFor="image-input">
-             <p>Imagem</p>
-            <input
-              type="text"
-              name="cardImage"
-              data-testid="image-input"
-              id="image-input"
-              value={ cardImage }
-              onChange={ onInputChange }
-              className= 'input-effect'
-            />
+            <br />
+            <br />
 
-          </label>
-          <br />
-          <br />
-
-          <label htmlFor="rare-input">
-             <p>Raridade</p>
-            <p />
-            <select
-              data-testid="rare-input"
-              id="rare-input"
-              name="cardRare"
-              value={ cardRare }
-              onChange={ onInputChange }
-            >
-              <option value="normal">normal</option>
-              <option value="raro">raro</option>
-              <option value="muito raro">muito raro</option>
-            </select>
-          </label>
-          <br />
-          <br />
-          {hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> : (
-            <label htmlFor="trunfo-input">
+            <label htmlFor="image-input">
+              <p>Imagem</p>
               <input
-                type="checkbox"
-                name="cardTrunfo"
-                data-testid="trunfo-input"
-                id="trunfo-input"
-                checked={ cardTrunfo }
+                type="text"
+                name="cardImage"
+                data-testid="image-input"
+                id="image-input"
+                value={ cardImage }
                 onChange={ onInputChange }
-                className='input-effect'
+                className="input-effect"
               />
-              <p>Super Trunfo Trybe</p>
+
             </label>
-          )}
+            <br />
+            <br />
 
-          <br />
-          <br />
-          <div className='button-div'>
+            <label htmlFor="rare-input">
+              <p>Raridade</p>
+              <p />
+              <select
+                data-testid="rare-input"
+                id="rare-input"
+                name="cardRare"
+                value={ cardRare }
+                onChange={ onInputChange }
+              >
+                <option value="normal">normal</option>
+                <option value="raro">raro</option>
+                <option value="muito raro">muito raro</option>
+              </select>
+            </label>
+            <br />
+            <br />
+            {hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> : (
+              <label htmlFor="trunfo-input">
+                <input
+                  type="checkbox"
+                  name="cardTrunfo"
+                  data-testid="trunfo-input"
+                  id="trunfo-input"
+                  checked={ cardTrunfo }
+                  onChange={ onInputChange }
+                  className="input-effect"
+                />
+                <p>Super Trunfo Trybe</p>
+              </label>
+            )}
 
-          <button
-            type="button"
-            data-testid="save-button"
-            id="save-button"
-            disabled={ isSaveButtonDisabled }
-            onClick={ () => onSaveButtonClick({
-              cardName,
-              cardDescription,
-              cardAttr1,
-              cardAttr2,
-              cardAttr3,
-              cardImage,
-              cardRare,
-              cardTrunfo,
-            }) }
-          >
-            Salvar
-          </button>
+            <br />
+            <br />
+            <div className="button-div">
 
-          </div>
-          
-        </form>
-      </div>
+              <button
+                type="button"
+                data-testid="save-button"
+                id="save-button"
+                disabled={ isSaveButtonDisabled }
+                onClick={ () => onSaveButtonClick({
+                  cardName,
+                  cardDescription,
+                  cardAttr1,
+                  cardAttr2,
+                  cardAttr3,
+                  cardImage,
+                  cardRare,
+                  cardTrunfo,
+                }) }
+              >
+                Salvar
+              </button>
+
+            </div>
+
+          </form>
+        </div>
       </div>
     );
   }

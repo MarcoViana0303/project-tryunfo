@@ -1,3 +1,7 @@
-{
+{ 
+    "rules": {
+     "react/jsx-max-depth": ["error", { "max": 5 }]
+
+    },
   "extends": "trybe-frontend"
 }
