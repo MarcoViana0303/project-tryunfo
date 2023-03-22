@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/app-toot-name/static/css/main.f81bc9fd.css",
-    "main.js": "/app-toot-name/static/js/main.e3e31a6b.js",
-    "index.html": "/app-toot-name/index.html",
-    "main.f81bc9fd.css.map": "/app-toot-name/static/css/main.f81bc9fd.css.map",
-    "main.e3e31a6b.js.map": "/app-toot-name/static/js/main.e3e31a6b.js.map"
+    "main.css": "/project-tryunfo/static/css/main.f81bc9fd.css",
+    "main.js": "/project-tryunfo/static/js/main.e3e31a6b.js",
+    "index.html": "/project-tryunfo/index.html",
+    "main.f81bc9fd.css.map": "/project-tryunfo/static/css/main.f81bc9fd.css.map",
+    "main.e3e31a6b.js.map": "/project-tryunfo/static/js/main.e3e31a6b.js.map"
   },
   "entrypoints": [
     "static/css/main.f81bc9fd.css",
