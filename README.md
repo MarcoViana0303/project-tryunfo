@@ -34,16 +34,18 @@ Entre no diretório do projeto
   cd project-tryunfo
 ```
 
+Obs: Certifique de estar usando a versão 18 do node. Para isso:
+```bash
+  nvm use 18
+```
+
 Instale as dependências.
 
 ```bash
   npm install
 ```
 
-Obs: Certifique de estar usando a versão 18 do node. Para isso:
-```bash
-  nvm use 18
-```
+
 
 
 Inicie o servidor
